@@ -5,7 +5,7 @@ var THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]';
 function setDetails(imageUrl, titleText) {
 	'use strict';
 	var detailImage = document.querySelector(DETAIL_IMAGE_SELECTOR);
-	detailImage.setAttribute('src', 'imageUrl');
+	detailImage.setAttribute('src', imageUrl);
 	
 	var detailTitle = document.querySelector(DETAIL_TITLE_SELECTOR);
 	detailTitle.textContent = titleText;
@@ -17,7 +17,7 @@ function imageFromThumb(thumbnail) {
 }
 function titleFromThumb(thumbnail) {
 	'use strict';
-	return thumbnail.getAttribute('dat-image-title');
+	return thumbnail.getAttribute('data-image-title');
 }
 function setDetailsFromThumb(thumbnail) {
 	'use strict';
